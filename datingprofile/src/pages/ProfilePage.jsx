@@ -73,19 +73,19 @@ export default function ProfilePage() {
             />
             
             <PhotoCard
-                photo={<img src="/photos/dakots.jpg" alt="Kingdom Hearts" />} />
+                photo={<img src="/photos/dakots.jpg" alt="Just Me" />} />
             <section className="invite-card">
                 <h2>So...</h2>
                 <p>I know that you have a lot going on, and I am not rushing you in any way. Just wanted to do something cute for you! The decision is still yours. Would you go on a date with me?</p>
 
+                                {/* Triggers the Left Popup */}
+                <button onClick={() => setShowLeftPopup(true)}>
+                    Swipe Left...
+                </button>
+                {" "}
                 {/* Triggers the Right Popup */}
                 <button onClick={() => setShowRightPopup(true)}>
                     Swipe Right!
-                </button>
-                {" "}
-                {/* Triggers the Left Popup */}
-                <button onClick={() => setShowLeftPopup(true)}>
-                    Swipe Left...
                 </button>
             </section>
 
