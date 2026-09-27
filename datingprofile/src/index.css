@@ -1,31 +1,3 @@
-.prompt-question {  
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 12px;
-}
- 
-.prompt-answer {
-  font-size: 1rem;
-  color: #44a7b9;
-  line-height: 1.6;
-}
-
-.prompt-card {
- background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.photo-card img {
-width: 100%;
-display: block;
-border-radius: 24px;
-}
-
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -60,7 +32,7 @@ border-radius: 24px;
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    --text: #0e0e0f;
     --text-h: #143881;
     --bg: #16171d;
     --border: #2e303a;
@@ -137,4 +109,39 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.prompt-question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.prompt-answer {
+  font-size: 1rem;
+  color: #44a7b9;
+  line-height: 1.6;
+}
+
+.prompt-card {
+ background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.photo-card img {
+width: 100%;
+display: block;
+border-radius: 24px;
+}
+
+.profile-page {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #C8A2C8;
 }
