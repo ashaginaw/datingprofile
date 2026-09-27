@@ -89,21 +89,6 @@ export default function ProfilePage() {
                 </button>
             </section>
 
-            {/* Swipe Right Popup Box */}
-            {showRightPopup && (
-                <div style={popupStyle}>
-                    <p style={{ fontSize: '18px', fontWeight: 'bold', margin: '0 0 20px 0', lineHeight: '1.4' }}>
-                        Yeah...I had a feeling you would say yes! I can't wait to see you. I will be in touch soon to set up a date!
-                    </p>
-                    <button 
-                        onClick={() => setShowRightPopup(false)}
-                        style={{ padding: '8px 16px', cursor: 'pointer' }}
-                    >
-                        Close
-                    </button>
-                </div>
-            )}
-
             {/* Swipe Left Popup Box */}
             {showLeftPopup && (
                 <div style={popupStyle}>
@@ -112,6 +97,21 @@ export default function ProfilePage() {
                     </p>
                     <button 
                         onClick={() => setShowLeftPopup(false)}
+                        style={{ padding: '8px 16px', cursor: 'pointer' }}
+                    >
+                        Close
+                    </button>
+                </div>
+            )}
+
+            {/* Swipe Right Popup Box */}
+            {showRightPopup && (
+                <div style={popupStyle}>
+                    <p style={{ fontSize: '18px', fontWeight: 'bold', margin: '0 0 20px 0', lineHeight: '1.4' }}>
+                        Yeah...I had a feeling you would say yes! I can't wait to see you. I will be in touch soon to set up a date!
+                    </p>
+                    <button 
+                        onClick={() => setShowRightPopup(false)}
                         style={{ padding: '8px 16px', cursor: 'pointer' }}
                     >
                         Close
