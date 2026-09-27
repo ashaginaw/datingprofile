@@ -1,5 +1,6 @@
 import MusicCard from "../components/MusicCard";
 import PromptCard from "../components/PromptCard";
+import PhotoCard from "../components/PhotoCard";
 
 export default function ProfilePage() {
     return(
@@ -27,6 +28,9 @@ export default function ProfilePage() {
                     answer="I like to talk things out and find a solution where both parties are happy. I don't like to hold a grudge in a relationship, so I try to come to a resolution as quickly as possible."
                 />
 
+                <PhotoCard
+                    photo={<img src="/photos/rumble.jpg" alt="Dakota's Dog" />} />
+
                 <PromptCard
                     prompt="I'll pick the playlist if you..."
                     answer="Don't mind my white boy dance moves. I'll also be singing along so be prepared!"
@@ -40,11 +44,6 @@ export default function ProfilePage() {
                     prompt="My Roman Empire is..."
                     answer="The Kingdom Hearts series and lore. There is SO MUCH that I could talk about it for hours. I hope you wouldn't mind watching me play the games and talk about the story with you. I would love to hear your thoughts on it too!"
                 />
-            
-
-            <section className="photo-card">
-                <img src="/photos/rumble.jpg" alt="Dakota's Dog" />
-            </section>
 
             <section className="music-card">
                 <MusicCard />
