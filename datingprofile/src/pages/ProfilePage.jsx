@@ -101,7 +101,7 @@ export default function ProfilePage() {
                 <button
                     onClick={() => {
                         setShowLeftPopup(true);
-                        sendResponse("No");
+                        sendResponse("No, but that's okay!");
                     }}
                 >
                     Swipe Left...
@@ -111,7 +111,7 @@ export default function ProfilePage() {
                 <button
                     onClick={() => {
                         setShowRightPopup(true);
-                        sendResponse("Yes");
+                        sendResponse("Yes! I'm excited to go on a date with you!");
                     }}
                 >
                     Swipe Right!
