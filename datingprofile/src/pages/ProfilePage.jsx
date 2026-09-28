@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import MusicCard from "../components/MusicCard";
 import PromptCard from "../components/PromptCard";
 import PhotoCard from "../components/PhotoCard";
@@ -24,6 +25,24 @@ export default function ProfilePage() {
         maxWidth: '400px',
         width: '90%',
         color: '#000'
+    };
+
+    const sendResponse = (response) => {
+        emailjs.send(
+            "service_c71gi6g",
+            "template_7xevjg1",
+            {
+                response: response,
+                timestamp: new Date().toLocaleString(),
+            },
+            "BYuAwTvmDwTHAtWzE"
+        )
+        .then(() => {
+            alert("Response submitted!");
+        })
+        .catch((error) => {
+            console.error(error);
+        });
     };
 
     return (
@@ -79,12 +98,22 @@ export default function ProfilePage() {
                 <p>I know that you have a lot going on, and I am not rushing you in any way. Just wanted to do something cute for you! The decision is still yours. Would you go on a date with me?</p>
 
                                 {/* Triggers the Left Popup */}
-                <button onClick={() => setShowLeftPopup(true)}>
+                <button
+                    onClick={() => {
+                        setShowLeftPopup(true);
+                        sendResponse("No");
+                    }}
+                >
                     Swipe Left...
                 </button>
                 {" "}
                 {/* Triggers the Right Popup */}
-                <button onClick={() => setShowRightPopup(true)}>
+                <button
+                    onClick={() => {
+                        setShowRightPopup(true);
+                        sendResponse("Yes");
+                    }}
+                >
                     Swipe Right!
                 </button>
             </section>
